@@ -6,6 +6,7 @@ import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
+import "./about.css";
 
 function About() {
   return (
@@ -28,13 +29,28 @@ function About() {
               </h1>
               <Aboutcard />
             </Col>
-            <Col
-              md={5}
-              style={{ paddingTop: "120px", paddingBottom: "50px" }}
-              className="about-img"
-            >
-              <img src={laptopImg} alt="about" className="img-fluid" />
-            </Col>
+             <Col
+  md={5}
+  style={{ paddingTop: "50px", paddingBottom: "50px" }}
+  className="about-img"
+>
+  <div className="futuristic-img-wrapper">
+    <img
+      src={laptopImg}
+      alt="about"
+      className="img-fluid futuristic-img"
+      style={{ maxHeight: "450px" }}
+    />
+    <div className="futuristic-glow" />
+    <div className="futuristic-scanlines" />
+    <div className="futuristic-corners">
+      <span className="corner tl" />
+      <span className="corner tr" />
+      <span className="corner bl" />
+      <span className="corner br" />
+    </div>
+  </div>
+</Col>
           </Row>
           <h1 className="project-heading">
             Professional <strong className="purple">Skillset </strong>

@@ -1,0 +1,163 @@
+/* ===== Contact Section ===== */
+.contact-section {
+  position: relative;
+  padding: 80px 0 60px;
+  min-height: 100vh;
+  background: var(--section-background-color, #1a1a2e);
+  display: flex;
+  align-items: center;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(200, 137, 230, 0.2);
+  border-radius: 16px;
+  padding: 50px 45px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Title ===== */
+.contact-title {
+  font-size: 2.4em;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contact-subtitle {
+  color: rgba(255, 255, 255, 0.55);
+  text-align: center;
+  font-size: 1em;
+  margin-bottom: 40px;
+}
+
+/* ===== Form ===== */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9em;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: 0.02em;
+}
+
+.form-icon {
+  color: #8b85be;
+  font-size: 1.1em;
+}
+
+.form-group input,
+.form-group textarea {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(200, 137, 230, 0.25);
+  border-radius: 10px;
+  padding: 13px 16px;
+  color: white;
+  font-size: 0.95em;
+  transition: border-color 0.25s ease, background 0.25s ease;
+  resize: none;
+  outline: none;
+  font-family: inherit;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #65649e;
+  background: rgba(199, 112, 240, 0.08);
+  box-shadow: 0 0 0 3px rgba(199, 112, 240, 0.12);
+}
+
+/* ===== Submit button — reuse existing .fork-btn style ===== */
+.submit-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+/* Extends your existing fork-btn */
+.contact-form .fork-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 36px;
+  font-size: 1em;
+  font-weight: 600;
+  border-radius: 50px;
+  background: transparent;
+  border: 2px solid #383f49;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  letter-spacing: 0.03em;
+}
+
+.contact-form .fork-btn:hover:not(:disabled) {
+  background: #383f49;
+  box-shadow: 0 0 20px rgba(112, 125, 240, 0.45);
+  transform: translateY(-2px);
+}
+
+.contact-form .fork-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.send-icon {
+  font-size: 1.1em;
+  transition: transform 0.2s ease;
+}
+
+.contact-form .fork-btn:hover .send-icon {
+  transform: translateX(4px);
+}
+
+/* ===== Status messages ===== */
+.status-message {
+  text-align: center;
+  font-size: 0.95em;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-top: 4px;
+}
+
+.status-message.success {
+  background: rgba(72, 199, 142, 0.12);
+  color: #48c78e;
+  border: 1px solid rgba(72, 199, 142, 0.3);
+}
+
+.status-message.error {
+  background: rgba(240, 82, 82, 0.12);
+  color: #f05252;
+  border: 1px solid rgba(240, 82, 82, 0.3);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .contact-card {
+    padding: 35px 22px;
+  }
+  .contact-title {
+    font-size: 1.8em;
+  }
+}

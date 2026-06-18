@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
+import myImg from "../../Assets/avatar.jpg";
 import Tilt from "react-parallax-tilt";
 
 function Home2() {
@@ -21,9 +21,9 @@ function Home2() {
               <br />
               I’m proficient in
               <i>
-                <b className="purple">
+                <b className="Red">
                   {" "}
-                  JavaScript, C++, Rust, Node.js, and Java{" "}
+                  JavaScript, C++, Python, Node.js, and Java{" "}
                 </b>
               </i>
               — and I enjoy working across both backend and frontend stacks.
